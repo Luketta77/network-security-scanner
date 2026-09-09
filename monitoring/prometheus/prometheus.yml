@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "security-validator"
+    static_configs:
+      - targets:
+          - "host.docker.internal:9108"
+
+
+No Linux, dependendo da configuração do Docker, substitua host.docker.internal pelo IP do host que executa o Python.
